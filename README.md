@@ -1,46 +1,53 @@
 # data-science-notebooks
 
-A collection of Python notebooks covering quantitative methods in economics, statistics, and data science — from experimental design to financial risk modeling.
+> Quantitative economics and data science tutorials — implemented from scratch in Python, applied to real Mexican datasets.
 
-Each folder corresponds to a topic and contains self-contained notebooks: theory is introduced before code, results are interpreted in context, and every notebook runs top-to-bottom without prior setup.
+**Iván de Luna** · [@ivandeluna](https://github.com/ivandeluna) · [ivandeluna.github.io](https://ivandeluna.github.io)
+
+---
+
+## About
+
+This repository contains self-contained tutorial notebooks covering statistics, econometrics, machine learning, and optimization — built with real data from INEGI, CONAPO, and other Mexican sources. Each notebook includes theory, implementation, and interpretation, with no assumed prior knowledge beyond basic Python.
+
+---
 
 ## Contents
 
-| Folder | # | Notebook | Topics |
-|--------|---|----------|--------|
-| `04-econometria-basica` | 1 | `rct_difference_in_differences.ipynb` | RCT · DiD · Statistical Power |
-| `04-econometria-basica` | 2 | `linear_regression_lasso_ridge.ipynb` | OLS · Lasso · Ridge · ENIGH 2022 |
+| Folder | Topic | Notebooks |
+|--------|-------|-----------|
+| [`04-econometria-basica`](04-econometria-basica/) | Econometrics | Linear regression with Lasso & Ridge · RCT & Difference-in-Differences |
+| [`05-optimizacion`](05-optimizacion/) | Stochastic Optimization | Random Search · Differential Evolution · PSO · SGD |
+| [`08-metodos-multivariados`](08-metodos-multivariados/) | Multivariate Methods | Multivariate EDA & PCA · Factor Analysis |
 
-*Folders follow a suggested learning sequence. More notebooks added regularly.*
-
-## How to Use
-
-Clone the repo and open any notebook locally:
-
-```bash
-git clone https://github.com/ivandeluna/data-science-notebooks.git
-cd data-science-notebooks
-```
-
-Or open directly in Google Colab by navigating to any `.ipynb` file on GitHub and clicking **Open in Colab**.
+---
 
 ## Requirements
 
-- Python >= 3.9
-- Core packages: `numpy` `pandas` `matplotlib` `seaborn` `scipy` `statsmodels` `scikit-learn`
+All notebooks use Python 3.9+. Install dependencies with:
 
 ```bash
-pip install numpy pandas matplotlib seaborn scipy statsmodels scikit-learn
+pip install numpy pandas matplotlib seaborn scikit-learn statsmodels factor_analyzer openpyxl
 ```
 
-## Data Sources
+---
 
-Some notebooks require external datasets. Each notebook includes a data section with download instructions.
+## Data
 
-| Notebook | Dataset | Source |
-|----------|---------|--------|
-| `linear_regression_lasso_ridge.ipynb` | ENIGH 2022 — `concentradohogar.csv` | [INEGI](https://www.inegi.org.mx/programas/enigh/nc/2022/#documentacion) |
+Real datasets used across notebooks:
+
+| Dataset | Source | Used in |
+|---------|--------|---------|
+| ENIGH 2022 — `concentradohogar.csv` | [INEGI](https://www.inegi.org.mx/programas/enigh/nc/2022/) | `04-econometria-basica` |
+| Household goods by state — `Hogares_equipo.xlsx` | ENIGH / INEGI | `08-metodos-multivariados` |
+| CONAPO marginalization indicators — `pobreza.xlsx` | [CONAPO](https://www.gob.mx/conapo) | `08-metodos-multivariados` |
+
+---
 
 ## Author
 
-**Iván de Luna** · [@ivandeluna](https://github.com/ivandeluna) · [ivandeluna.github.io](https://ivandeluna.github.io)
+**Iván de Luna** — Quantitative economist. Focus on regional development in Mexico.
+
+- GitHub: [@ivandeluna](https://github.com/ivandeluna)
+- Site: [ivandeluna.github.io](https://ivandeluna.github.io)
+- Research: DAAD — Doctorado en Administración y Alta Dirección
